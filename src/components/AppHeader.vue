@@ -38,6 +38,7 @@ export default {
 
 <style scoped>
 .mainContainerx {
+  z-index: 999;
   background-color: rgb(240, 247, 253);
   box-shadow: 0px 0.1px 0px 0px rgb(5, 0, 0);
   position: sticky;

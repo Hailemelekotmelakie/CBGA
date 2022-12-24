@@ -1,6 +1,7 @@
 <template>
     <!--image slider start-->
     <div class="sliderContainer">
+        <h4>Developers</h4>
         <div class="slider">
         <div class="slides">
             <!--radio buttons start-->
@@ -11,24 +12,16 @@
             <!--radio buttons end-->
             <!--slide images start-->
             <div class="slide first">
-            <img src="@/assets/Hailemelekot.png" alt="">
+            <img class="slideImages" src="@/assets/Hailemelekot.png" alt="">
             </div>
             <div class="slide">
-            <img src="@/assets/jonatan-pie-3l3RwQdHRHg-unsplash.jpg" alt="">
-            </div>
-            <div class="slide">
-            <img src="@/assets/joshua-sortino-xZqr8WtYEJ0-unsplash.jpg" alt="">
-            </div>
-            <div class="slide">
-            <img src="@/assets/paul-szewczyk-IbEKc_YMsDM-unsplash.jpg" alt="">
-            </div>
+            <img class="slideImages" src="@/assets/jonatan-pie-3l3RwQdHRHg-unsplash.jpg" alt="">
+            </div> 
             <!--slide images end-->
             <!--automatic navigation start-->
             <div class="navigation-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-            <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
             </div>
             <!--automatic navigation end-->
         </div>
@@ -36,8 +29,6 @@
         <div class="navigation-manual">
             <label for="radio1" class="manual-btn"></label>
             <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
         </div>
         <!--manual navigation end-->
         </div>
@@ -50,21 +41,20 @@ export default {
    data() {
     return {
         counter: 1,
-        showOnce: false,
     }
     },
-    mounted() {
-        this.startInterval()
+    created() {
+      this.startInterval();
     },
     methods: {
-        startInterval() {
-            window.setInterval(() => {
+        startInterval: function() {
+          setInterval(() => {
                 document.getElementById('radio' + this.counter).checked = true;
                 this.counter++;
-                if (this.counter > 4) {
+                if (this.counter > 2) {
                     this.counter = 1;
                 }
-            }, 5000)
+            }, 3000)
         },
     },
 }
@@ -75,6 +65,15 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+} 
+.sliderContainer h4{
+  font-size: 23px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  text-decoration: 2px rgb(14, 22, 144) underline double;
+  /* border-bottom:2px solid #40D3DC; */
 }
 .slider{
   width: 800px;
@@ -94,14 +93,20 @@ export default {
 }
 
 .slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20%;
-  transition: 2s;
-}
+  transition: 1s;
+  height: 300px;
+  overflow: hidden;
+ }
 
 .slide img{
-  width: 800px;
-  height: 500px;
-}
+  width: auto;
+  max-width: 500px;
+  height: 300px;
+ }
 
 /*css for manual slide navigation*/
 
@@ -111,10 +116,11 @@ export default {
   margin-top: -40px;
   display: flex;
   justify-content: center;
+  top: 1300px;
 }
 
 .manual-btn{
-  border: 2px solid #40D3DC;
+  border: 2px solid #a6a5a5;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -126,7 +132,7 @@ export default {
 }
 
 .manual-btn:hover{
-  background: #40D3DC;
+  background: #ffffff;
 }
 
 #radio1:checked ~ .first{
@@ -137,14 +143,6 @@ export default {
   margin-left: -20%;
 }
 
-#radio3:checked ~ .first{
-  margin-left: -40%;
-}
-
-#radio4:checked ~ .first{
-  margin-left: -60%;
-}
-
 /*css for automatic navigation*/
 
 .navigation-auto{
@@ -153,10 +151,11 @@ export default {
   width: 800px;
   justify-content: center;
   margin-top: 460px;
+  top: 800px;
 }
 
 .navigation-auto div{
-  border: 2px solid #40D3DC;
+  border: 2px solid #828282;
   padding: 5px;
   border-radius: 10px;
   transition: 1s;
@@ -167,18 +166,42 @@ export default {
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1{
-  background: #40D3DC;
+  background: #ffffff;
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2{
-  background: #40D3DC;
+  background: #ffffff;
 }
 
-#radio3:checked ~ .navigation-auto .auto-btn3{
-  background: #40D3DC;
+@media screen and (max-width:890px){
+  .sliderContainer{
+    margin-top: -100px;
+    margin-bottom: 0px;
+    padding: 0;
+    padding: 5px;
+    transform: scale(0.5);
+  }
+  .navigation-auto{
+  top: -100px;
+  }
+  .navigation-manual{
+  top: 400px;
+  }
+}
+@media screen and (max-width:281px){
+   .sliderContainer{
+    margin-top: -100px;
+    margin-bottom: 0px;
+    padding: 0;
+    padding: 5px;
+    transform: scale(0.3);
+  }
+  .navigation-auto{
+  top: -100px;
+  }
+  .navigation-manual{
+  top: 400px;
+  }
 }
 
-#radio4:checked ~ .navigation-auto .auto-btn4{
-  background: #40D3DC;
-}
 </style>
