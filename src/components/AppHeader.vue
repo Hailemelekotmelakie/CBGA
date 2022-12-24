@@ -85,6 +85,7 @@ nav a.router-link-exact-active {
 
 @media screen and (max-width: 800px) {
   nav {
+    z-index: 999;
     right: 200%;
     flex-direction: column;
     position: absolute;

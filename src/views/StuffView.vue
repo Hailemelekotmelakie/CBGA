@@ -1,6 +1,8 @@
 <template>
 <div>
-    <div>This is board Meambers</div>
+    <BoardMembers></BoardMembers>
+    <BoardMembers></BoardMembers>
+    <BoardMembers></BoardMembers>
     <BoardMembers></BoardMembers>
     <DeveloperTeam></DeveloperTeam>
 
