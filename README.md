@@ -1,4 +1,9 @@
-# blog
+# CBGA
+
+## First  clone the repository
+```
+npm clone https://github.com/Hailemelekotmelakie/CBGA.git
+```
 
 ## Project setup
 ```
@@ -10,15 +15,4 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Now you have it on browser
