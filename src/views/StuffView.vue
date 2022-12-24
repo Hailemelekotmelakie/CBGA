@@ -1,6 +1,7 @@
 <template>
 <div>
-    <div>This is board Meambers</div>
+    <div class="BoardMembersText">Board members</div>
+    <BoardMembers></BoardMembers>
     <BoardMembers></BoardMembers>
     <DeveloperTeam></DeveloperTeam>
 
@@ -18,3 +19,15 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+
+.BoardMembersText{
+    text-decoration: green wavy underline;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+</style>

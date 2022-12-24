@@ -19,14 +19,21 @@
         throughout government organizations and goal orientation towards Sustainable
         Development Goals (SDGs)
       </div>
-    </div>
+    </div>  
+    <DropDown></DropDown>
+    <LookingFor></LookingFor>
   </div>
 </template>
 
 <script>
+import DropDown from '@/views/DropDown.vue'
+import LookingFor from '@/views/LookingFor.vue'
 export default {
   name: "HomeView",
-
+  components: {
+    DropDown:DropDown,
+    LookingFor:LookingFor
+  },
   data() {
     return {};
   },
@@ -71,9 +78,10 @@ export default {
   margin: 10px;
   cursor: pointer;
   margin: 10px;
+  transition: 0.4s;
 }
 .homeButtonContainerUp:hover {
-  background-color: red;
+  background-color: rgb(66, 164, 128);
 }
 .homeLabelContainer {
   display: flex;
