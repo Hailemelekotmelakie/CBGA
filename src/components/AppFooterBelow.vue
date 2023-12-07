@@ -41,6 +41,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 30px 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .FooterBelowLeft {
   display: flex;

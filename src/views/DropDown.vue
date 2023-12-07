@@ -3,7 +3,7 @@
       <div class="card">
         <div class="face face1">
           <div class="content">
-            <h3>Hailemelekot</h3>
+            <h3>Mission</h3>
           </div>
         </div>
         <div class="face face2">
@@ -16,7 +16,7 @@
       <div class="card">
         <div class="face face1">
           <div class="content">
-            <h3>Hailemelekot</h3>
+            <h3>Plan</h3>
           </div>
         </div>
         <div class="face face2">
@@ -29,7 +29,7 @@
       <div class="card">
         <div class="face face1">
           <div class="content">
-            <h3>Hailemelekot</h3>
+            <h3>Vision</h3>
           </div>
         </div>
         <div class="face face2">

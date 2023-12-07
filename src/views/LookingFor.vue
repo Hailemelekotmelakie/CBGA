@@ -6,7 +6,7 @@
         <button>Get Started</button>
       </div>
       <div class="image">
-        <img src="https://i.postimg.cc/65QxYYzh/001234.png">
+        <img src="@/assets/backgroundLookingfor.png">
       </div>
     </div>
 </template>

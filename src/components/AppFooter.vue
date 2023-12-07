@@ -18,21 +18,17 @@
         <div class="footerRightLabel">Partners</div>
       </div>
       <div class="footerRight">
-        <div class="footerRightHeader">Services</div>
-        <div class="footerRightLabel">Consultamncy</div>
-        <div class="footerRightLabel">Advocation</div>
-        <div class="footerRightLabel">Help</div>
-      </div>
-      <div class="footerRight">
         <div class="footerRightHeader">Legal</div>
-        <div class="footerRightLabel">Terms</div>
-        <div class="footerRightLabel">Policies</div>
+        <a class="footerRightLabel" href="http://localhost:8080/privacy"
+          >Terms and Policies</a
+        >
         <div class="footerRightLabel">Claims</div>
         <div class="footerRightLabel">Conditions</div>
+        <div class="footerRightLabel">Help</div>
       </div>
     </div>
     <div class="footerRight">
-      <div class="footerRightHeader">SUBSCRIBE</div>
+      <div class="footerRightHeaderS">SUBSCRIBE</div>
       <div class="footerRightLabelLatest">
         The latest news, articles, and resources, sent to your inbox weekly.
       </div>
@@ -42,7 +38,6 @@
   </div>
 </template>
 <script>
-import "@/css/footer.css";
 export default {};
 </script>
 
@@ -56,6 +51,7 @@ export default {};
   justify-content: space-between;
   align-items: flex-start;
   gap: 10px;
+  font-family: sans-serif;
 }
 .footerRightLeftContainer {
   display: flex;
@@ -92,6 +88,11 @@ export default {};
 .footerRightHeader {
   font-size: 16px;
   font-weight: bold;
+}
+.footerRightHeaderS {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
 }
 .footerRightLabel {
   font-size: 15px;

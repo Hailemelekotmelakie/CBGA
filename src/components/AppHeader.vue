@@ -16,9 +16,7 @@
       <router-link @click="isDisplayed = !isDisplayed" to="/stuff">
         Board members
       </router-link>
-      <router-link @click="isDisplayed = !isDisplayed" to="/donate"
-        ><button class="Donate">Donate</button></router-link
-      >
+      <router-link @click="isDisplayed = !isDisplayed" to="/donate"><button class="Donate">Donate</button></router-link>
     </nav>
   </div>
   <router-view />
@@ -44,6 +42,7 @@ export default {
   position: sticky;
   top: 0px;
 }
+
 nav {
   padding: 0px 50px;
   display: flex;
@@ -78,6 +77,7 @@ nav a.router-link-exact-active {
   cursor: pointer;
   border: 1px solid #38d996;
 }
+
 .Donate:hover {
   background-color: transparent;
   border: 1px solid #38d996;
@@ -102,6 +102,7 @@ nav a.router-link-exact-active {
     display: flex;
     justify-content: flex-end;
   }
+
   .menusContainer {
     display: flex;
     flex-direction: column;
@@ -112,6 +113,7 @@ nav a.router-link-exact-active {
     cursor: pointer;
     width: min-content;
   }
+
   .lines {
     display: flex;
     justify-content: flex-end;
@@ -120,12 +122,15 @@ nav a.router-link-exact-active {
     height: 3.5px;
     border-radius: 3px;
   }
+
   .lines:nth-child(even) {
     width: 30px;
   }
+
   .lines:nth-child(odd) {
     width: 25px;
   }
+
   .displayable {
     right: 0%;
   }

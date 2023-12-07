@@ -1,207 +1,193 @@
 <template>
-    <!--image slider start-->
+  <div>
+    <h3 class="Developers">Developers</h3>
     <div class="sliderContainer">
-        <h4>Developers</h4>
-        <div class="slider">
-        <div class="slides">
-            <!--radio buttons start-->
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-            <!--radio buttons end-->
-            <!--slide images start-->
-            <div class="slide first">
-            <img class="slideImages" src="@/assets/Hailemelekot.png" alt="">
-            </div>
-            <div class="slide">
-            <img class="slideImages" src="@/assets/jonatan-pie-3l3RwQdHRHg-unsplash.jpg" alt="">
-            </div> 
-            <!--slide images end-->
-            <!--automatic navigation start-->
-            <div class="navigation-auto">
-              <div class="auto-btn1"></div>
-              <div class="auto-btn2"></div>
-            </div>
-            <!--automatic navigation end-->
+      <div class="person">
+        <div class="container">
+          <div class="container-inner">
+            <img class="circle" src="@/assets/pngtree-male-avatar-vector-icon-png-image_691595.jpg" />
+          </div>
         </div>
-        <!--manual navigation start-->
-        <div class="navigation-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
+        <div class="divider"></div>
+        <div class="name">Hailemelekot</div>
+        <div class="title">Developer</div>
+        <div class="tel">Tel: <a href="tel:+251947053537">+251 947 053 537</a></div>
+      </div>
+      <div class="person">
+        <div class="container">
+          <div class="container-inner">
+            <img class="circle"
+              src="@/assets/businessman-icon-image-male-avatar-profile-vector-glasses-beard-hairstyle-179728610.jpg" />
+          </div>
         </div>
-        <!--manual navigation end-->
-        </div>
+        <div class="divider"></div>
+        <div class="name">Dagim</div>
+        <div class="title">UX/UI Designer</div>
+        <div class="tel">Tel: <a href="tel:+251947053537">+251 947 053 537</a></div>
+      </div>
     </div>
-    <!--image slider end-->
+  </div>
 </template>
 
 <script>
 export default {
-   data() {
+  data() {
     return {
-        counter: 1,
     }
-    },
-    created() {
-      this.startInterval();
-    },
-    methods: {
-        startInterval: function() {
-          setInterval(() => {
-                document.getElementById('radio' + this.counter).checked = true;
-                this.counter++;
-                if (this.counter > 2) {
-                    this.counter = 1;
-                }
-            }, 3000)
-        },
-    },
+  },
+
 }
 </script>
 
 <style scoped>
-.sliderContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 40px;
-} 
-.sliderContainer h4{
-  font-size: 23px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bold;
-  text-decoration: 2px rgb(14, 22, 144) underline double;
-  /* border-bottom:2px solid #40D3DC; */
-}
-.slider{
-  width: 800px;
-  height: 500px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.slides{
-  width: 500%;
-  height: 500px;
+.Developers {
   display: flex;
-}
-
-.slides input{
-  display: none;
-}
-
-.slide{
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 20%;
-  transition: 1s;
-  height: 300px;
-  overflow: hidden;
- }
-
-.slide img{
-  width: auto;
-  max-width: 500px;
-  height: 300px;
- }
-
-/*css for manual slide navigation*/
-
-.navigation-manual{
-  position: absolute;
-  width: 800px;
-  margin-top: -40px;
-  display: flex;
   justify-content: center;
-  top: 1300px;
+  padding: 0px 50px;
+  gap: 20px;
+  font-size: 26px;
+  width: 30%;
+  margin: auto;
+  padding: auto;
+  margin-top: 40px;
+  border-bottom: 2px solid #07110c;
 }
 
-.manual-btn{
-  border: 2px solid #a6a5a5;
-  padding: 5px;
-  border-radius: 10px;
+.sliderContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0px 50px;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.person {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  transition: 1s;
   cursor: pointer;
-  transition: 1s;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 50px rgba(255, 255, 255, 0.809);
+  border: 1px solid rgba(177, 177, 177, 0.809);
 }
 
-.manual-btn:not(:last-child){
-  margin-right: 40px;
+.person:hover {
+  background-color: #84848439;
 }
 
-.manual-btn:hover{
-  background: #ffffff;
+.container {
+  border-radius: 50%;
+  height: 312px;
+  -webkit-tap-highlight-color: transparent;
+  transform: scale(0.48);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 400px;
 }
 
-#radio1:checked ~ .first{
-  margin-left: 0;
+.container:hover {
+  transform: scale(0.54);
 }
 
-#radio2:checked ~ .first{
-  margin-left: -20%;
+.container-inner {
+  clip-path: path("M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+    );
+  position: relative;
+  transform-origin: 50%;
+  top: -240px;
 }
 
-/*css for automatic navigation*/
-
-.navigation-auto{
+.circle {
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 363px;
+  left: 10px;
+  pointer-events: none;
   position: absolute;
-  display: flex;
-  width: 800px;
-  justify-content: center;
-  margin-top: 460px;
-  top: 800px;
+  top: 210px;
+  width: 363px;
+  box-shadow: 1px 1px 100px black;
+  margin: 10px;
 }
 
-.navigation-auto div{
-  border: 2px solid #828282;
-  padding: 5px;
-  border-radius: 10px;
-  transition: 1s;
+.img {
+  pointer-events: none;
+  position: relative;
+  transform: translateY(20px) scale(1.15);
+  transform-origin: 50% bottom;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation-auto div:not(:last-child){
-  margin-right: 40px;
+.container:hover .img {
+  transform: translateY(0) scale(1.2);
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
-  background: #ffffff;
+.img1 {
+  left: 22px;
+  top: 164px;
+  width: 340px;
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2{
-  background: #ffffff;
+.img2 {
+  left: -46px;
+  top: 174px;
+  width: 444px;
 }
 
-@media screen and (max-width:890px){
-  .sliderContainer{
-    margin-top: -100px;
-    margin-bottom: 0px;
-    padding: 0;
-    padding: 5px;
-    transform: scale(0.5);
-  }
-  .navigation-auto{
-  top: -100px;
-  }
-  .navigation-manual{
-  top: 400px;
-  }
-}
-@media screen and (max-width:281px){
-   .sliderContainer{
-    margin-top: -100px;
-    margin-bottom: 0px;
-    padding: 0;
-    padding: 5px;
-    transform: scale(0.3);
-  }
-  .navigation-auto{
-  top: -100px;
-  }
-  .navigation-manual{
-  top: 400px;
-  }
+.img3 {
+  left: -16px;
+  top: 144px;
+  width: 466px;
 }
 
+.divider {
+  background-color: #5be6a1;
+  height: 1px;
+  width: 160px;
+}
+
+.name {
+  color: #404245;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.title {
+  color: #6e6e6e;
+  font-family: arial;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.tel {
+  color: #6e6e6e;
+  font-family: arial;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+a {
+  color: #07110c;
+}
+
+@media screen and (max-width:800px) {
+  .sliderContainer {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .person {
+    width: 80%;
+  }
+}
 </style>

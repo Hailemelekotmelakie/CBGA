@@ -3,12 +3,12 @@
         <div class="imagesDiv1">
             <div class="memberName">MR. Aboneh Teshome</div>
             <div class="memberHoner">Head Director</div>
-            <img class="images1" src="@/assets/joshua-sortino-xZqr8WtYEJ0-unsplash.jpg" alt="">
+            <img class="images1" src="@/assets/pngtree-male-avatar-vector-icon-png-image_691595.jpg" alt="">
         </div>
         <div class="imagesDiv2">
         <div class="memberName">MR. Abrham</div>
             <div class="memberHoner">Head Director</div>
-            <img class="images2" src="@/assets/joshua-sortino-xZqr8WtYEJ0-unsplash.jpg" alt="">
+            <img class="images2" src="@/assets/businessman-icon-image-male-avatar-profile-vector-glasses-beard-hairstyle-179728610.jpg" alt="">
         </div>
     </div>
 </template>
@@ -70,9 +70,9 @@
     font-size: 15px;
     font-weight: bold;
     font-family: monospace;
-    border: 1px solid rgb(202, 202, 202);
     padding: 10px;
-    background-color: rgb(197, 226, 251);
+    background: rgb(0,212,255); 
+background: linear-gradient(90deg, rgba(0,212,255,1) 8%, rgb(15, 123, 139) 50%, rgba(0,212,255,1) 100%);
 }
 @media screen and (max-width:900px){
     .boardImges{
